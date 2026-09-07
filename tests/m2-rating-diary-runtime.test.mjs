@@ -51,7 +51,7 @@ test("diary writer inserts repeatable watch rows and owner-scopes deletion", () 
 
 test("mobile-first panel exposes a safe unavailable state", () => {
   assert.match(panel, /!enabled\s*\?\s*\(/);
-  assert.match(panel, /امتیازدهی، ثبت تاریخ تماشا و Rewatch آماده‌اند/);
+  assert.match(panel, /امتیازدهی، ثبت تاریخ تماشا و بازتماشا آماده‌اند/);
   assert.match(panel, /grid-cols-5[\s\S]*sm:grid-cols-10/);
   assert.match(panel, /min-h-11/);
 });
