@@ -11,7 +11,7 @@ const profilePage = await readFile(
   "utf8",
 );
 const migration = await readFile(
-  new URL("../supabase/migrations/20260901143000_m3_community_identity_foundation.sql", import.meta.url),
+  new URL("../supabase/migrations/20260902060157_m3_community_identity_foundation.sql", import.meta.url),
   "utf8",
 );
 

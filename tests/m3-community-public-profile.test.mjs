@@ -27,11 +27,11 @@ const dataBoundaryMigration = await readFile(
   "utf8",
 );
 const ratingDiaryMigration = await readFile(
-  new URL("../supabase/migrations/20260830115500_m2_rating_diary_foundation.sql", import.meta.url),
+  new URL("../supabase/migrations/20260831090820_m2_rating_diary_foundation.sql", import.meta.url),
   "utf8",
 );
 const communityMigration = await readFile(
-  new URL("../supabase/migrations/20260901143000_m3_community_identity_foundation.sql", import.meta.url),
+  new URL("../supabase/migrations/20260902060157_m3_community_identity_foundation.sql", import.meta.url),
   "utf8",
 );
 
