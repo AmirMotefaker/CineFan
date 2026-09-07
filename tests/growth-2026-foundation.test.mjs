@@ -51,7 +51,8 @@ test("footer attribution links Amir Motefaker to the canonical personal site", (
 });
 
 test("mobile navigation and search remain available below desktop breakpoint", () => {
-  assert.match(navbar, /md:hidden/);
+  assert.match(navbar, /xl:hidden/);
+  assert.match(navbar, /hidden items-center gap-0\.5 xl:flex/);
   assert.match(navbar, /باز کردن منوی FilmTrack/);
   assert.match(navbar, /href="\/movies"/);
   assert.match(navbar, /href="\/shows"/);

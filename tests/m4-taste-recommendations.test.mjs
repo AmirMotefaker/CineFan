@@ -37,17 +37,17 @@ test("private recommendation page preserves M2 readiness boundary", () => {
   assert.match(page, /if \(!userId\) redirect\("\/auth"\)/);
 });
 
-test("recommendation v2 is zero-cost, explainable and does not write user data", () => {
+test("recommendation engine is zero-cost, explainable and does not write user data", () => {
   assert.match(page, /recommendations\?page=1/);
   assert.match(page, /recommendation\.reasons/);
   assert.match(v2Engine, /reasons\.push/);
-  assert.match(page, /TMDB/);
+  assert.match(page, /امتیاز مرجع/);
   assert.doesNotMatch(`${page}\n${v2Engine}`, /openai|gemini|anthropic|groq/i);
   assert.doesNotMatch(page, /\.insert\(|\.upsert\(|\.update\(|\.delete\(/);
 });
 
-test("cold start remains explicit and mobile-first in v2", () => {
-  assert.match(page, /برای Recommendation v2 دقیق‌تر/);
+test("cold start remains explicit and mobile-first", () => {
+  assert.match(page, /برای پیشنهادهای دقیق‌تر/);
   assert.match(page, /هنوز پیشنهاد کافی نداریم/);
   assert.match(page, /grid-cols-2/);
   assert.match(page, /sm:grid-cols-3/);

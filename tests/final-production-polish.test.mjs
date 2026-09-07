@@ -28,7 +28,8 @@ test("title route stays noindex on missing TMDB data", () => {
 });
 
 test("mobile navigation and founder attribution remain production-visible", () => {
-  assert.match(navbar, /md:hidden/);
+  assert.match(navbar, /xl:hidden/);
+  assert.match(navbar, /hidden items-center gap-0\.5 xl:flex/);
   assert.match(navbar, /<LiveSearch\s*\/>/);
   assert.match(footer, /https:\/\/amirmotefaker\.ir/);
   assert.match(footer, /امیر متفکر/);

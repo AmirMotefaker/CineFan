@@ -46,17 +46,18 @@ test("title experience preserves critical SEO and product integrations", () => {
   assert.match(titlePage, /getRottenTomatoesUrl/);
 });
 
-test("rating and diary controls remain accessible and mobile friendly", () => {
-  assert.match(ratingDiary, /aria-label=\{`امتیاز \$\{value\} از 10`\}/);
+test("rating and diary controls remain accessible, Persian and mobile friendly", () => {
+  assert.match(ratingDiary, /aria-label=\{`امتیاز \$\{faNumber\(value\)\} از ۱۰`\}/);
   assert.match(ratingDiary, /min-h-11/);
   assert.match(ratingDiary, /min-h-12/);
   assert.match(ratingDiary, /role="status"/);
-  assert.match(ratingDiary, /Rewatch/);
+  assert.match(ratingDiary, /بازتماشا/);
 });
 
 test("responsive shell keeps search and complete mobile navigation available", () => {
   assert.match(navbar, /aria-label="ناوبری اصلی"/);
-  assert.match(navbar, /md:hidden/);
+  assert.match(navbar, /xl:hidden/);
+  assert.match(navbar, /hidden items-center gap-0\.5 xl:flex/);
   assert.match(navbar, /FilmTrack Plus/);
   assert.match(navbar, /<LiveSearch \/>/);
   assert.match(navbar, /min-h-12/);
