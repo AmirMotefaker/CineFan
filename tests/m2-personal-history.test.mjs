@@ -29,11 +29,11 @@ test("rewatches are derived from repeated canonical diary identities", () => {
   assert.match(historyPage, /titleKey\(row\.title_id, row\.title_type\)/);
   assert.match(historyPage, /watchCounts\.set\(key, \(watchCounts\.get\(key\) \|\| 0\) \+ 1\)/);
   assert.match(historyPage, /Math\.max\(0, count - 1\)/);
-  assert.match(historyPage, /Rewatch/);
+  assert.match(historyPage, /بازتماشا/);
 });
 
-test("FilmTrack personal ratings are explicitly separated from TMDB aggregate ratings", () => {
-  assert.match(historyPage, /امتیاز شخصی FilmTrack؛ مستقل از امتیاز تجمیعی TMDB/);
+test("FilmTrack personal ratings are explicitly separated from aggregate reference ratings", () => {
+  assert.match(historyPage, /امتیاز شخصی فیلم‌ترک؛ مستقل از امتیاز تجمیعی مرجع/);
   assert.match(historyPage, /rating_10/);
 });
 
